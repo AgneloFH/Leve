@@ -10,7 +10,7 @@
         { name: "Dashboard", href: "/", icon: "apps", class_name: "link-dashboard" },
         { name: "Discover", href: "/", icon: "home", class_name: "link-discover"},
         { name: "Messages", href: "/", icon: "comment", class_name: "messages"},
-        { name: "My Listing", href: "/", icon: "city", class_name: "link-my-listing" },
+        { name: "Listing", href: "/", icon: "city", class_name: "link-my-listing" },
         { name: "Customer", href: "/", icon: "customer", class_name: "link-customer" },
         { name: "Analytics", href: "/", icon: "chart_kanban", class_name: "link-analytics"},
         { name: "Transaction", href: "/", icon: "usd_circle", class_name: "link-transaction"}
@@ -30,7 +30,7 @@
     <%= render(RealEstate::SideBar::NavigationComponent.new) do |component| %>
     <% component.with_links([
         { name: "Settings", href: "/", icon: "settings" },
-        { name: "Activity Log", href: "/", icon: "clock" },
+        { name: "Activity", href: "/", icon: "clock" },
       ]) %>
     <% end %>
   </div>

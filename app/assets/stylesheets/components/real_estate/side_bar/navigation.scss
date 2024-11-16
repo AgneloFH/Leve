@@ -52,7 +52,7 @@
   color: var(--colorWhite);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .navigation-component-nav li {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
