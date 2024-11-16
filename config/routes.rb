@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get 'chat', to: 'chats#index', as: :chat
       get 'listing', to: 'listings#index', as: :listing
       get 'customer', to: 'customers#index', as: :customer
+      get 'analytics', to: 'analytics#index', as: :analytics
       namespace :real_estate do
         namespace :settings do
           # A rota para index de settings
