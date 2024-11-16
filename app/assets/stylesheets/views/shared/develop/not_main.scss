@@ -1,9 +1,12 @@
 .develop-not {
   display: grid;
   align-items: center;
-  justify-items: center;
+  justify-self: center;
   align-content: center;
+  justify-items: center;
+  justify-content: center;
   grid-template-columns: 1fr;
+  -webkit-writing-mode: vertical-rl;
   padding-top: 50px;
   max-width: 350px;
   height: max-content;
