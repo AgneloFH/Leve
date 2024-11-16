@@ -14,14 +14,17 @@ Rails.application.routes.draw do
     get 'customer', to: 'customers#index', as: :customer
     get 'analytics', to: 'analytics#index', as: :analytics
     get 'transaction', to: 'transactions#index', as: :transaction
+    get 'log_activity', to: 'log_activities#index', as: :log_activity
+    # => Routes Property
     get 'settings', to: 'settings#index', as: :settings
+
       #namespace :real_estate do
+      # resources :property_types, path: 'property_types', only: [:index, :new, :create, :edit, :update, :destroy, :show]
       #  namespace :settings do
           # A rota para index de settings
       #    resources :settings, only: :index
 
        #   namespace :settings do
-           # resources :property_types, path: 'property_types', only: [:index, :new, :create, :edit, :update, :destroy, :show]
         #  end
        # end
       #end

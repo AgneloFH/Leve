@@ -30,7 +30,7 @@
     <%= render(RealEstate::SideBar::NavigationComponent.new) do |component| %>
     <% component.with_links([
         { name: "Settings", href: admin_settings_path, icon: "settings" },
-        { name: "Activity", href: admin_settings_path, icon: "clock" },
+        { name: "Activity", href: admin_log_activity_path, icon: "clock" },
       ]) %>
     <% end %>
   </div>
