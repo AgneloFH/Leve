@@ -18,8 +18,11 @@
   column-gap: 14px;
 }
 
-.container-orveview-button-export {}
+// .container-orveview-button-export {}
 
+/* Media queries for responsiveness */
+
+/* Telas pequenas - Smartphones */
 @media (max-width: 767px) {
   .container-orveview-functions {
     grid-template-columns: auto;

@@ -26,3 +26,12 @@
     font-size: 1rem;
   }
 }
+
+/* Media queries for responsiveness */
+
+/* Telas pequenas - Smartphones */
+@media (max-width: 767px) {
+  .button-export {
+    padding: 8px 14px;
+  }
+}

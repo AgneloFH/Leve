@@ -13,7 +13,7 @@ form {
   border-radius: var(--borderRadiusInput);
   height: max-content;
   max-width: 100%;
-  padding: 5px;
+  padding: 3px 3px 3px 10px;
   column-gap: 8px;
 
   i {
@@ -54,6 +54,6 @@ form {
 /* Telas pequenas - Smartphones */
 @media (max-width: 767px) {
   .input-group-search {
-    max-width: inherit;
+    padding: 5px 5px 5px 10px;
   }
 }
