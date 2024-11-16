@@ -5,8 +5,8 @@
   grid-template-columns: 1fr auto;
 }
 
-.container-orveview-text {}
-
+// .container-orveview-date-selector {}
+// .container-orveview-text {}
 
 .container-orveview-functions {
   display: grid;
@@ -18,7 +18,14 @@
   column-gap: 14px;
 }
 
-.container-orveview-date-selector {}
-
-
 .container-orveview-button-export {}
+
+@media (max-width: 767px) {
+  .container-orveview-functions {
+    grid-template-columns: auto;
+  }
+
+  .container-orveview-date-selector {
+    display: none;
+  }
+}
