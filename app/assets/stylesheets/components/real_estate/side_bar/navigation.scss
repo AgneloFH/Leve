@@ -40,6 +40,7 @@
   display: grid;
   align-content: center;
   transition: var(--transition);
+  background-color: transparent;
   color: var(--colorWhite);
   font-size: 1.2rem;
 
@@ -65,25 +66,33 @@
     display: grid;
     align-items: center;
     justify-items: center;
+    justify-content: center;
     grid-template-columns: 1fr;
     border-radius: var(--borderRadiusButton);
+    font-weight: var(--weightRegular);
     color: var(--colorBlack2);
-    font-size: 14px;
+    font-size: var(--sizeSm);
+    text-align: center;
+    min-width: 70px;
     padding: 10px;
     row-gap: 3px;
   }
 
   .navigation-component-nav li i {
     display: grid;
+    text-align: center;
     justify-items: center;
     color: var(--colorBlack2);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .navigation-component-nav li a:hover {
+    background: linear-gradient(135deg, rgba(255, 222, 172, 0.1), #FFDEAC);
   }
 
   .navigation-component-nav li a:hover,
   .navigation-component-nav li a:hover i {
-    background-color: var(--colorGray1);
-    color: initial;
+    color: var(--colorBlack);
   }
 
 }
