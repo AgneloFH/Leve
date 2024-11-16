@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get 'listing', to: 'listings#index', as: :listing
       get 'customer', to: 'customers#index', as: :customer
       get 'analytics', to: 'analytics#index', as: :analytics
+      get 'transaction', to: 'transactions#index', as: :transaction
       namespace :real_estate do
         namespace :settings do
           # A rota para index de settings
