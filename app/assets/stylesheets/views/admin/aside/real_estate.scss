@@ -69,24 +69,32 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .sidebar-content .link-analytics {
     display: none !important;
     /* Prioriza o estilo */
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 600px) {
   .sidebar-content .link-transaction {
     display: none !important;
     /* Prioriza o estilo */
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 550px) {
 
   .sidebar-content .link-my-listing,
   .sidebar-content .link-customer {
+    display: none !important;
+    /* Prioriza o estilo */
+  }
+}
+
+@media (max-width: 340px) {
+
+  .sidebar-content .link-discover {
     display: none !important;
     /* Prioriza o estilo */
   }

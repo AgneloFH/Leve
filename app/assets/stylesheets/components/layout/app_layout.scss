@@ -93,10 +93,11 @@ main::-webkit-scrollbar-thumb:hover {
     border-radius: var(--borderRadiusButton);
     background-color: var(--colorWhite);
     transition: var(--transition);
+    padding-bottom: 0;
+    padding: 3px 5px;
     height: 70px;
     width: max-content;
     bottom: 20px;
-    padding: 5px;
 
     /* Centralizar horizontalmente */
     left: 50%;
@@ -133,10 +134,11 @@ main::-webkit-scrollbar-thumb:hover {
     border-radius: var(--borderRadiusButton);
     background-color: var(--colorWhite);
     transition: var(--transition);
-    height: 70px;
     width: max-content;
+    padding-bottom: 0;
+    padding: 3px 10px;
+    height: 70px;
     bottom: 20px;
-    padding: 5px;
 
     /* Centralizar horizontalmente */
     left: 50%;
