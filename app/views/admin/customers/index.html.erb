@@ -1,0 +1,23 @@
+<div class="container-orveview">
+  <div class="container-orveview-text">
+    <%= render(Overview::OverviewComponent.new(title: "My Title")) do |component|  %>
+    <% component.with_overview_title do %>
+    <h1>Customer List</h1>
+    <% end %>
+
+    <% component.with_overview_description do %>
+    <p>List of clients involving interests</p>
+    <% end %>
+    <% end %>
+  </div>
+
+  <div class="container-orveview-functions">
+    <div class="container-orveview-button-export">
+      <%= render 'shared/button_export' %>
+    </div>
+  </div>
+</div>
+
+
+<br>
+<%= render 'shared/develop/not_main' %>
