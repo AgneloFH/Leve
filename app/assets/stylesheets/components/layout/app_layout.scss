@@ -18,7 +18,7 @@
   background-color: var(--colorWhite);
   border-bottom: 1px solid var(--colorGray4);
   transition: var(--transition);
-  padding: 5px 15px;
+  padding: 5px 20px;
   height: 80px;
 }
 
@@ -27,7 +27,7 @@ aside {
   grid-area: aside;
   background-color: var(--colorPri);
   transition: var(--transition);
-  padding: 18px;
+  padding: 12px;
 }
 
 /* Main content */
@@ -79,7 +79,7 @@ main::-webkit-scrollbar-thumb:hover {
   /* Header */
   .header {
     border-bottom: none;
-    padding: 15px 10px;
+    padding: 15px;
     height: max-content;
     transition: var(--transition);
   }
@@ -112,14 +112,14 @@ main::-webkit-scrollbar-thumb:hover {
     grid-template-areas:
       "header header header header header header header header"
       "main main main main main main main main"
-      "aside aside aside aside aside aside aside aside";
+      "aside aside aside aside aside aside aside aside ";
     grid-template-columns: repeat(8, 1fr);
   }
 
   /* Header */
   .header {
     border-bottom: none;
-    padding: 15px 10px;
+    padding: 15px;
     height: max-content;
     transition: var(--transition);
   }
@@ -151,6 +151,10 @@ main::-webkit-scrollbar-thumb:hover {
       "aside aside header header header header header header header header header header"
       "aside aside main main main main main main main main main main";
     grid-template-columns: repeat(12, 1fr);
+  }
+
+  aside {
+    width: 220px;
   }
 }
 
