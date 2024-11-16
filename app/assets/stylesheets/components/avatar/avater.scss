@@ -23,12 +23,30 @@
   display: grid;
   align-content: center;
   grid-template-columns: 1fr;
+  row-gap: 3px;
+
+  p {
+    color: var(--colorBlack2);
+    font-size: var(--sizeMd);
+    font-weight: var(--weightSemiBold);
+  }
+
+  span {
+    color: var(--colorGray3);
+    font-size: var(--sizeXsm);
+    font-weight: var(--weightRegular);
+  }
 }
 
 .avatar-settings {
   display: grid;
   align-content: center;
   grid-template-columns: 1fr;
+
+  i {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
 }
 
 /* Tablets */

@@ -1,0 +1,28 @@
+.button-export {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: auto 1fr auto;
+  background-color: var(--buttonBgPri);
+  border-radius: var(--borderRadiusButton);
+  width: max-content;
+  padding: 4px 14px;
+  column-gap: 5px;
+
+  h2 {
+    display: grid;
+    align-content: center;
+    color: var(--colorWhite);
+    font-size: var(--sizeSm);
+    font-family: var(--weightSemiBold);
+    height: max-content;
+  }
+
+  i {
+    display: grid;
+    align-content: center;
+    color: var(--colorWhite);
+    height: max-content;
+    font-size: 1rem;
+  }
+}
