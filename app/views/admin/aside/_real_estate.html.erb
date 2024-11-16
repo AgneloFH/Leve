@@ -29,8 +29,8 @@
   <div class="sidebar-footer">
     <%= render(RealEstate::SideBar::NavigationComponent.new) do |component| %>
     <% component.with_links([
-        { name: "Settings", href: "/", icon: "settings" },
-        { name: "Activity", href: "/", icon: "clock" },
+        { name: "Settings", href: admin_settings_path, icon: "settings" },
+        { name: "Activity", href: admin_settings_path, icon: "clock" },
       ]) %>
     <% end %>
   </div>
