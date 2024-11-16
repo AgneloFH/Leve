@@ -27,12 +27,12 @@
   display: grid;
   align-content: center;
   grid-template-columns: auto 1fr;
-  transition: var(--transition);
-  color: var(--colorWhite);
   font-weight: var(--weightRegular);
+  transition: var(--transition);
+  font-size: var(--sizeMd);
+  color: var(--colorWhite);
   border-radius: 5px;
   column-gap: 14px;
-  font-size: 15px;
   padding: 12px;
 }
 
@@ -59,7 +59,7 @@
   .navigation-component-nav li {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
-    column-gap: 1px;
+    column-gap: 3px;
   }
 
   .navigation-component-nav li a {
@@ -71,7 +71,7 @@
     border-radius: var(--borderRadiusButton);
     font-weight: var(--weightRegular);
     color: var(--colorBlack2);
-    font-size: var(--sizeSm);
+    font-size: var(--sizeXsm);
     text-align: center;
     min-width: 70px;
     padding: 10px;
@@ -83,7 +83,7 @@
     text-align: center;
     justify-items: center;
     color: var(--colorBlack2);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .navigation-component-nav li a:hover {
