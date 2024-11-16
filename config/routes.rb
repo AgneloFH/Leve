@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     namespace :admin do
       get 'dashboard', to: 'dashboards#show', as: :dashboard
       get 'discover', to: 'discovers#index', as: :discover
+      get 'chat', to: 'chats#index', as: :chat
       namespace :real_estate do
         namespace :settings do
           # A rota para index de settings
