@@ -10,10 +10,19 @@
   .card-overview-title h1 {
     display: flex;
     height: max-content;
+    font-size: var(--sizeXl);
+    font-weight: var(--weightSemiBold);
+    color: var(--colorBlack);
   }
 
   .card-overview-description {
     display: flex;
     height: max-content;
+
+    p {
+      font-size: var(--sizeMd);
+      font-weight: var(--weightRegular);
+      color: var(--colorGray3);
+    }
   }
 }

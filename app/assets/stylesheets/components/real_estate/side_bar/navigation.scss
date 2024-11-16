@@ -25,18 +25,20 @@
 
 .navigation-component-nav li a {
   display: grid;
+  align-content: center;
   grid-template-columns: auto 1fr;
   transition: var(--transition);
   color: var(--colorWhite);
+  font-weight: var(--weightRegular);
   border-radius: 5px;
   column-gap: 14px;
   font-size: 15px;
-  font-weight: lighter;
   padding: 12px;
 }
 
 .navigation-component-nav li i {
   display: grid;
+  align-content: center;
   transition: var(--transition);
   color: var(--colorWhite);
   font-size: 1.2rem;
