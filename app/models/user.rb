@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   before_validation :generate_unique_code, on: :create
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :validatable
+  # :confirmable, :timeoutable, :registerable, :rememberable and :omniauthable
+  devise :database_authenticatable,
+  :recoverable, :validatable, :lockable, :trackable
 
   validates :code, presence: true, uniqueness: true
 

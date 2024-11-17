@@ -30,11 +30,11 @@
   <%= render(Layout::AppLayoutComponent.new) do |layout| %>
 
   <% layout.with_header do %>
-  <%= render 'admin/header/real_estate' %>
+  <%= render 'layouts/admin/header' %>
   <% end %>
 
   <% layout.with_aside do %>
-  <%= render 'admin/aside/real_estate' %>
+  <%= render 'layouts/admin/navigation' %>
   <% end %>
 
   <%= yield %>
