@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   }
 
   namespace :api do
+    # Real Estate
+    namespace :property do
     resources :property_types
+    end
   end
 
   namespace :admin do
