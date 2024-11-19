@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Api
-  class PropertyTypesController < AdminController
+  class PropertyTypesController < ApiController
     before_action :set_property_type, only: %i[show edit update]
 
     # Exibe a lista de PropertyTypes ordenados pelo nome
