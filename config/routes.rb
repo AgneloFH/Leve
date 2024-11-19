@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  get "properties/index"
-  get "properties/show"
-  get "properties/new"
-  get "properties/create"
-  get "properties/edit"
-  get "properties/update"
-  get "properties/destroy"
-  root 'home#site'
-
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -16,6 +7,7 @@ Rails.application.routes.draw do
   namespace :api do
     # Real Estate
     namespace :property do
+    resources :properties
     resources :property_types
     end
   end
