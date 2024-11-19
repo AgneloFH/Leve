@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_11_14_004931) do
+ActiveRecord::Schema[8.0].define(version: 2024_11_19_172910) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
   enable_extension "pgcrypto"
+
+  create_table "properties", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "title", null: false
+    t.text "description", null: false
+    t.float "usable_area", null: false
+    t.float "total_area"
+    t.integer "bedrooms", default: 0
+    t.integer "bathrooms", default: 0
+    t.integer "washrooms", default: 0
+    t.integer "suites", default: 0
+    t.integer "garage_space", default: 0
+    t.boolean "accepts_pets"
+    t.integer "code", null: false
+    t.uuid "property_type_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_properties_on_code", unique: true
+    t.index ["property_type_id"], name: "index_properties_on_property_type_id"
+  end
 
   create_table "property_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.string "name", limit: 50, null: false
@@ -49,4 +68,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_14_004931) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
+
+  add_foreign_key "properties", "property_types"
 end
