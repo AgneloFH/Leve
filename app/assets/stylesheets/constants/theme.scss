@@ -5,10 +5,14 @@
   --colorBlack: #000000;
   --colorBlack2: #1D2939;
   --colorWhite: #ffff;
-  --colorGray1: #F4F3FF;
-  --colorGray2: #BDBDBD;
-  --colorGray3: #6E6E6E;
-  --colorGray4: #A8A8A8;
+  --colorGray: #f8fafc;
+  --colorGray1: #f3f4f6;
+  --colorGray2: #e5e7eb;
+  --colorGray3: #d1d5db;
+  --colorGray4: #9ca3af;
+  --colorGray5: #6b7280;
+  --colorGray6: #555;
+
   --colorSoaMist: #C2DEB9;
   --colorNavajo: #FFDEAC;
   --colorGreen1: #4CAF50;
@@ -21,6 +25,11 @@
   --colorButtonHover: var(--colorSec2);
   --colorLabel: var(--colorGray3);
   --buttonBgPri: var(--colorPri);
+  --colorBorderTble: var(--colorGray2);
+
+  --colorTextP: var(--colorGray6);
+
+  --bgInput: var(--colorGray1);
 
   --borderRadiusButton: 50px;
 
@@ -38,6 +47,8 @@
 
   --borderRadiusInput: 5px;
   --borderRadiusButton: 50px;
+
+
 
   --transition: all 400ms ease-in-out 0s;
 }

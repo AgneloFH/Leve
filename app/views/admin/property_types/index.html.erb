@@ -1,0 +1,21 @@
+<div class="container-orveview">
+  <div class="container-orveview-text">
+    <%= render(Overview::OverviewComponent.new(title: "My Title")) do |component|  %>
+    <% component.with_overview_title do %>
+    <h1>Property Types</h1>
+    <% end %>
+
+    <% component.with_overview_description do %>
+    <p>List of clients involving interests</p>
+    <% end %>
+    <% end %>
+  </div>
+
+  <div class="container-orveview-functions">
+    <div class="container-orveview-button-export">
+      <%= link_to 'New Property Type', new_admin_property_type_path, class: 'btn btn-success' %>
+    </div>
+  </div>
+</div>
+<br>
+<%= render 'api/property_types/property_types' %>

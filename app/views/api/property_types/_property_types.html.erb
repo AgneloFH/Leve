@@ -1,0 +1,20 @@
+<div class="container-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @property_types.each do |property_type| %>
+        <tr>
+          <td><%= property_type.name %></td>
+          <td>
+            <%= link_to 'Edit', edit_admin_property_type_path(property_type), class: 'btn btn-primary' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

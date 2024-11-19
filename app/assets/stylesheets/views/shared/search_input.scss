@@ -20,14 +20,16 @@ form {
     display: grid;
     height: max-content;
     font-size: 1rem;
-    color: var(--colorGray3);
+    color: var(--colorGray4);
   }
 
   input[type="text"] {
     height: 35px;
     border: none;
-    background-color: transparent;
-    font-size: 15px;
+    background-color: var(--bgInput);
+    color: var(--colorBlack2);
+    font-size: var(--sizeMd);
+    font-weight: var(--weightRegular);
     outline: none;
   }
 
@@ -38,9 +40,9 @@ form {
     align-items: center;
     align-content: center;
     grid-template-columns: auto auto;
-    background-color: var(--colorGray1);
     border-radius: var(--borderRadiusButton);
-    color: var(--colorGray3);
+    background-color: var(--bgInput);
+    color: var(--colorGray5);
     font-size: 15px;
     column-gap: 5px;
     padding: 0 10px;

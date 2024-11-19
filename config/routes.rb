@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  namespace :api do
+    resources :property_types
+  end
+
   namespace :admin do
     get 'dashboard', to: 'dashboards#show', as: :dashboard
     get 'discover', to: 'discovers#index', as: :discover
@@ -15,11 +19,11 @@ Rails.application.routes.draw do
     get 'analytics', to: 'analytics#index', as: :analytics
     get 'transaction', to: 'transactions#index', as: :transaction
     get 'log_activity', to: 'log_activities#index', as: :log_activity
-    # => Routes Property
     get 'settings', to: 'settings#index', as: :settings
+    # => Routes Property
+    resources :property_types, except: [:show]
 
       #namespace :real_estate do
-      # resources :property_types, path: 'property_types', only: [:index, :new, :create, :edit, :update, :destroy, :show]
       #  namespace :settings do
           # A rota para index de settings
       #    resources :settings, only: :index
