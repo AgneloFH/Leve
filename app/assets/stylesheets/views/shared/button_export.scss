@@ -6,8 +6,9 @@
   background-color: var(--buttonBgPri);
   border-radius: var(--borderRadiusButton);
   width: max-content;
-  padding: 8px 14px;
+  padding: 4px 14px;
   column-gap: 5px;
+  height: 37px;
 
   h2 {
     display: grid;
@@ -32,6 +33,6 @@
 /* Telas pequenas - Smartphones */
 @media (max-width: 767px) {
   .button-export {
-    padding: 8px 14px;
+    padding: 4px 14px;
   }
 }

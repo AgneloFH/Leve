@@ -1,5 +1,5 @@
-</div><%= render(Button::ButtonAddComponent.new) do |component| %>
-  <% component.with_links([
+<%= render(Button::ButtonAddComponent.new) do |component| %>
+<% component.with_links([
     {  icon1: "document", name: "Export", href: admin_discover_path, icon2: "small_down", class_name: "link-dashboard" },
   ]) %>
 <% end %>

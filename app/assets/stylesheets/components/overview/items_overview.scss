@@ -10,7 +10,7 @@
   .card-overview-title h1 {
     display: flex;
     height: max-content;
-    font-size: var(--sizeXl);
+    font-size: var(--sizeXxl);
     font-weight: var(--weightSemiBold);
     color: var(--colorBlack);
   }
@@ -20,7 +20,7 @@
     height: max-content;
 
     p {
-      font-size: var(--sizeMd);
+      font-size: var(--sizeLg);
       font-weight: var(--weightRegular);
       color: var(--colorTextP);
     }

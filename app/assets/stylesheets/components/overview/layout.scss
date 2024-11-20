@@ -1,0 +1,41 @@
+/* Overview Layout base */
+.overview-layout {
+  display: grid;
+  align-content: center;
+  grid-template-areas:
+    "container-text container-two container-three";
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: auto;
+  column-gap: 23px;
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+
+  /* containerOne */
+  .container-text {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    grid-area: container-text;
+  }
+
+  /* containerTwo */
+  .container-two {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: flex-end;
+    grid-template-columns: 1fr;
+    grid-area: container-two;
+  }
+
+  /* container-three */
+  .container-three {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-items: flex-end;
+    grid-template-columns: 1fr;
+    grid-area: container-three;
+  }
+}

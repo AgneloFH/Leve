@@ -9,13 +9,13 @@
 // .container-orveview-text {}
 
 .container-orveview-functions {
-  display: grid;
+  display: flex;
   align-items: center;
   align-content: center;
   justify-items: flex-end;
   justify-content: flex-end;
-  grid-template-columns: auto auto;
   column-gap: 14px;
+  height: fit-content;
 }
 
 // .container-orveview-button-export {}

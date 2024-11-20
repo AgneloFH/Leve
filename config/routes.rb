@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    get 'dashboard', to: 'dashboards#show', as: :dashboard
+    get 'dashboard', to: 'dashboards#index', as: :dashboard
     get 'discover', to: 'discovers#index', as: :discover
     get 'chat', to: 'chats#index', as: :chat
     get 'listing', to: 'listings#index', as: :listing
