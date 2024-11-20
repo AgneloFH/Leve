@@ -3,7 +3,7 @@ class User < ApplicationRecord
   devise :database_authenticatable,
   :recoverable, :validatable, :lockable, :trackable
 
-  validations :blocked, presence: true
+  validates :blocked, presence: true
 
   #before_validation :generate_unique_code, on: :create
   #validates :code, presence: true, uniqueness: true

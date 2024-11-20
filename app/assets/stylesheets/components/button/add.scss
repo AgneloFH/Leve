@@ -1,0 +1,31 @@
+.button-add-component a {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: auto 1fr auto;
+  background-color: var(--buttonBgPri);
+  border-radius: var(--borderRadiusButton);
+  color: var(--colorWhite);
+  width: max-content;
+  padding: 8px 14px;
+  column-gap: 8px;
+
+
+
+  i {
+    display: grid;
+    align-content: center;
+    color: var(--colorWhite);
+    height: max-content;
+    font-size: 1rem;
+  }
+}
+
+/* Media queries for responsiveness */
+
+/* Telas pequenas - Smartphones */
+@media (max-width: 767px) {
+  .button-export {
+    padding: 8px 14px;
+  }
+}

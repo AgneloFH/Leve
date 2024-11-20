@@ -1,0 +1,5 @@
+<%= render(Button::ButtonAddComponent.new) do |component| %>
+  <% component.with_links([
+      { name: "Add Imóvel", href: admin_dashboard_path, icon1: "plus", class_name: "link-dashboard" },
+  ]) %>
+<% end %>

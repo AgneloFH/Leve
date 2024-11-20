@@ -1,5 +1,5 @@
-<div class="button-export">
-  <%= render 'shared/icons/document' %>
-  <h2> Export </h2>
-  <%= render 'shared/icons/small_down' %>
-</div>
+</div><%= render(Button::ButtonAddComponent.new) do |component| %>
+  <% component.with_links([
+    {  icon1: "document", name: "Export", href: admin_discover_path, icon2: "small_down", class_name: "link-dashboard" },
+  ]) %>
+<% end %>

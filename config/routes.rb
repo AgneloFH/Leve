@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'home#site'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
@@ -6,9 +7,14 @@ Rails.application.routes.draw do
 
   namespace :api do
     # Real Estate
-    namespace :property do
-    resources :properties
-    resources :property_types
+    namespace :real_estate do
+      namespace :properties do
+        # Property Register (sem `index`)
+        resources :records, except: [:index]
+
+        # Property Types
+        resources :property_types
+      end
     end
   end
 
