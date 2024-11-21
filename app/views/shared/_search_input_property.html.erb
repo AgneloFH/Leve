@@ -1,0 +1,6 @@
+<%= form_with url: url, method: :get, local: true, class: "search-form" do |form| %>
+<div class="input-group-search">
+  <%= render icon_partial %>
+  <%= form.text_field :query, placeholder: placeholder || "Search...", class: "form-control", value: params[:query] %>
+</div>
+<% end %>

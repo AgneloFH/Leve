@@ -1,0 +1,78 @@
+.container-property-listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 23px;
+}
+
+.card-property {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border: 1px solid var(--colorGray2);
+  border-radius: 10px;
+  padding: 10px;
+
+  .property-image {
+    width: 120px;
+    height: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  //property-details
+  .property-details {
+    display: grid;
+    width: 100%;
+    row-gap: 15px;
+    padding: 5px;
+
+    .property-type {
+      display: grid;
+      row-gap: 2px;
+
+      .text-type {
+        font-size: var(--sizeLg);
+        font-weight: var(--weightSemiBold);
+        color: var(--colorBlack);
+      }
+
+      .text-adress {
+        font-size: var(--sizeXsm);
+        font-weight: var(--weightRegular);
+        color: var(--colorGray6);
+      }
+    }
+
+    .property-rooms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      gap: 8px;
+
+      .text-rooms {
+        font-size: 12px;
+        font-weight: var(--weightSemiBold);
+        color: var(--colorBlack);
+      }
+    }
+
+    .property-price {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      column-gap: 10px;
+
+      .text-price {
+        font-size: var(--sizeLg);
+        font-weight: var(--weightSemiBold);
+        color: var(--colorBlack);
+      }
+
+      .text-link-id {
+        cursor: pointer;
+        font-size: var(--sizeMd);
+        font-weight: var(--weightRegular);
+        color: var(--colorPri);
+      }
+    }
+  }
+}

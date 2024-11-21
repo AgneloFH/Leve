@@ -1,0 +1,15 @@
+.container-input-search-property {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--colorGray2);
+  padding: 20px 0;
+
+  .group-filter {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-self: flex-end;
+    justify-items: flex-end;
+    justify-content: end;
+  }
+}

@@ -1,67 +1,81 @@
-<%= form_with(model: @property, url: api_real_estate_property_properties_path) do |form| %>
-<h1>Cadastrar Propriedade</h1>
+<%= form_with(model: @property, url: api_real_estate_properties_records_path) do |form| %>
+<div class="container-form-property">
 
-<div class="form-group">
-  <%= form.label :title, 'Título' %>
-  <%= form.text_field :title, class: 'form-control', required: true %>
-</div>
+  <div class="container-group">
+    <h3>Qual Tipo de Propriedade?</h3>
+    <div class="form-group">
+      <%= form.collection_select :property_type_id, PropertyType.all, :id, :name, { prompt: 'Selecione um tipo de propriedade' }, class: 'form-control', required: true %>
+    </div>
+  </div>
 
-<div class="form-group">
-  <%= form.label :description, 'Descrição' %>
-  <%= form.text_area :description, class: 'form-control', required: true %>
-</div>
+  <div class="container-group">
+    <h3>Informe a metragem</h3>
+    <div class="form-grup-area">
+      <div class="form-group">
+        <%= form.label :usable_area, 'Área Útil (m²)' %>
+        <%= form.number_field :usable_area, class: 'form-control', required: true %>
+      </div>
 
-<div class="form-group">
-  <%= form.label :property_type_id, 'Tipo de Propriedade' %>
-  <%= form.collection_select :property_type_id, PropertyType.all, :id, :name, { prompt: 'Selecione um tipo de propriedade' }, class: 'form-control', required: true %>
-</div>
+      <div class="form-group">
+        <%= form.label :total_area, 'Área Total (m²)' %>
+        <%= form.number_field :total_area, class: 'form-control' %>
+      </div>
+    </div>
+  </div>
 
-<div class="form-group">
-  <%= form.label :usable_area, 'Área Útil (m²)' %>
-  <%= form.number_field :usable_area, class: 'form-control', required: true %>
-</div>
+  <div class="container-group">
+    <h3>Comôdos</h3>
+    <div class="form-grup-rooms">
+      <div class="form-group">
+        <%= form.label :bedrooms, 'Quartos' %>
+        <%= form.number_field :bedrooms, class: 'form-control', value: 1, min: 0 %>
+      </div>
 
-<div class="form-group">
-  <%= form.label :total_area, 'Área Total (m²)' %>
-  <%= form.number_field :total_area, class: 'form-control' %>
-</div>
+      <div class="form-group">
+        <%= form.label :bathrooms, 'Banheiros' %>
+        <%= form.number_field :bathrooms, class: 'form-control', value: 1, min: 0 %>
+      </div>
 
-<div class="form-group">
-  <%= form.label :bedrooms, 'Quartos' %>
-  <%= form.number_field :bedrooms, class: 'form-control', value: 1, min: 0 %>
-</div>
+      <div class="form-group">
+        <%= form.label :washrooms, 'Lavabos' %>
+        <%= form.number_field :washrooms, class: 'form-control', value: 0, min: 0 %>
+      </div>
 
-<div class="form-group">
-  <%= form.label :bathrooms, 'Banheiros' %>
-  <%= form.number_field :bathrooms, class: 'form-control', value: 1, min: 0 %>
-</div>
+      <div class="form-group">
+        <%= form.label :suites, 'Suítes' %>
+        <%= form.number_field :suites, class: 'form-control', value: 0, min: 0 %>
+      </div>
 
-<div class="form-group">
-  <%= form.label :washrooms, 'Lavabos' %>
-  <%= form.number_field :washrooms, class: 'form-control', value: 0, min: 0 %>
-</div>
+      <div class="form-group">
+        <%= form.label :garage_space, 'Vagas de Garagem' %>
+        <%= form.number_field :garage_space, class: 'form-control', value: 0, min: 0 %>
+      </div>
+    </div>
+  </div>
 
-<div class="form-group">
-  <%= form.label :suites, 'Suítes' %>
-  <%= form.number_field :suites, class: 'form-control', value: 0, min: 0 %>
-</div>
+  <div class="container-group">
+    <h3>Aceita Pets?</h3>
+    <div class="form-group-pets">
+      <%= form.check_box :accepts_pets, class: 'form-control' %>
+      <%= form.label :accepts_pets, 'Aceita Pets?' %>
+    </div>
+  </div>
 
-<div class="form-group">
-  <%= form.label :garage_space, 'Vagas de Garagem' %>
-  <%= form.number_field :garage_space, class: 'form-control', value: 0, min: 0 %>
-</div>
+  <div class="container-group">
+    <h3>Descrição e Detalhes?</h3>
+    <div class="form-group">
+      <%= form.label :title, 'Título' %>
+      <%= form.text_field :title, class: 'form-control', required: true %>
+    </div>
 
-<div class="form-group">
-  <%= form.label :accepts_pets, 'Aceita Pets?' %>
-  <%= form.check_box :accepts_pets, class: 'form-control' %>
-</div>
+    <div class="form-group">
+      <%= form.label :description, 'Descrição' %>
+      <%= form.text_area :description, class: 'form-control', required: true %>
+    </div>
+  </div>
 
-<div class="form-group">
-  <%= form.label :code, 'Código' %>
-  <%= form.number_field :code, class: 'form-control', required: true %>
-</div>
-
-<div class="form-group">
-  <%= form.submit 'Cadastrar Propriedade', class: 'btn btn-primary' %>
+  <div class="form-group">
+    <%= form.submit 'Cadastrar Propriedade', class: 'btn btn-primary' %>
+  </div>
 </div>
 <% end %>

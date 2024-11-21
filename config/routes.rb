@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboards#index', as: :dashboard
     get 'discover', to: 'discovers#index', as: :discover
     get 'chat', to: 'chats#index', as: :chat
-    get 'listing', to: 'listings#index', as: :listing
+    resources :listings, except: [:new]
     get 'customer', to: 'customers#index', as: :customer
     get 'analytics', to: 'analytics#index', as: :analytics
     get 'transaction', to: 'transactions#index', as: :transaction

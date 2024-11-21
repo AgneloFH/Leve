@@ -3,12 +3,11 @@ module Api
   module RealEstate
     module Properties
       class  RecordsController < ApiController
-        before_action :set_property, only: %i[show edit update destroy]
+        before_action :set_property, only: %i[edit update destroy]
 
         # Listar todos os imóveis
         def index
           @properties = Property.all
-          render json: @properties
         end
 
         # Exibir detalhes de um imóvel específico
@@ -16,17 +15,12 @@ module Api
           render json: @property
         end
 
-        # Exibir o formulário para criar um novo imóvel
-        def new
-          @property = Property.new
-        end
-
         # Criar um novo imóvel
         def create
           @property = Property.new(property_params)
 
           if @property.save
-            render json: { message: 'Imóvel criado com sucesso.', property: @property }, status: :created
+            redirect_to admin_listing_path, notice: 'Property Type created successfully'
           else
             render json: { errors: @property.errors.full_messages }, status: :unprocessable_entity
           end

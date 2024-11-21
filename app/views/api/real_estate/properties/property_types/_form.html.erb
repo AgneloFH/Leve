@@ -1,4 +1,4 @@
-<%= form_with(model: @property_type, url: api_real_estate_property_property_types_path) do |form| %>
+<%= form_with(model: @property_type, url: api_real_estate_properties_property_types_path) do |form| %>
 <% if @property_type.errors.any? %>
 <div id="error_explanation">
   <h2><%= pluralize(@property_type.errors.count, "error") %> prevented this property type from being saved:</h2>

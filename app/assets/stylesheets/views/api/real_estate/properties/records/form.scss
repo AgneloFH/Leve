@@ -1,0 +1,53 @@
+.container-form-property {
+  display: grid;
+  row-gap: 35px;
+  max-width: 600px;
+
+  h3 {
+    font-size: var(--sizeLg);
+    font-weight: var(--weightSemiBold);
+    color: var(--colorBlack);
+  }
+
+  .form-group {
+    display: grid;
+    row-gap: 5px;
+  }
+
+  .container-group {
+    display: grid;
+    row-gap: 18px;
+  }
+
+  .form-grup-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 23px;
+    height: auto;
+  }
+
+  .form-grup-rooms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    height: max-content;
+    gap: 23px;
+  }
+
+
+  .container-group {
+    display: grid;
+    row-gap: 18px;
+
+    .form-group-pets {
+      display: grid;
+      align-items: center;
+      align-content: center;
+      grid-template-columns: auto 1fr;
+      column-gap: 8px;
+
+      label {
+        font-size: var(--sizeMd);
+      }
+    }
+  }
+}

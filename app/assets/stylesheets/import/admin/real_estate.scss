@@ -3,7 +3,7 @@
 @import 'components/avatar/import';
 @import 'components/real_estate/side_bar/import';
 @import 'components/overview/import';
-@import 'components/button/add';
+@import 'components/button/import';
 
 //views
 @import 'views/admin/aside/real_estate';
@@ -15,3 +15,6 @@
 @import 'views/shared/bell_note';
 @import 'views/shared/date_selector';
 @import 'views/shared/button_export';
+
+// API
+@import 'views/api/real_estate/properties/records/import';

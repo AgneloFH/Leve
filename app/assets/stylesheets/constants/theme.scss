@@ -18,8 +18,8 @@
   --colorGreen1: #4CAF50;
   --colorCancel: #ff3960;
 
-  --colorBorderInput: var(--colorGray2);
-  --colorBorderInputHover: var(--colorPri);
+  --colorBorderInput: 1px solid var(--colorGray3);
+  --colorBorderInputHover: var(--colorBlack);
   --colorButton: var(--colorPri);
   --colorButtonText: var(--colorWhite);
   --colorButtonHover: var(--colorSec2);
@@ -47,8 +47,64 @@
 
   --borderRadiusInput: 5px;
   --borderRadiusButton: 50px;
-
-
+  --borderRadius: 5px 1px solid var(--colorGray4);
 
   --transition: all 400ms ease-in-out 0s;
+}
+
+label {
+  height: auto;
+  font-size: 12px;
+  color: var(--colorGray5);
+}
+
+/*
+*  input [type="checkbox"],
+*  input [type="radio"] input [type="submit"] 
+*/
+
+input [type="text"],
+input [type="password"],
+input [type="email"],
+input [type="number"],
+input [type="url"],
+input [type="tel"],
+input [type="date"],
+input [type="time"],
+input [type="datetime-local"],
+input [type="color"],
+input [type="search"],
+input [type="range"],
+input [type="file"],
+input [type="hidden"],
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  border: var(--colorBorderInput);
+  border-radius: var(--borderRadiusInput);
+  font-size: var(--sizeLg);
+  height: 40px;
+}
+
+input [type="text_area"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: var(--colorBorderInput);
+  border-radius: var(--borderRadiusInput);
+  height: 40px;
+}
+
+
+
+/* Estilo para foco */
+input [type="text"]:focus,
+input [type="password"]:focus,
+input [type="email"]:focus,
+input [type="number"]:focus,
+input:focus,
+select:focus {
+  outline: none;
+  border: 1px solid var(--colorBorderInputHover);
 }

@@ -6,30 +6,15 @@
   <!-- Overview::OverviewComponent -->
   <%= render(Overview::OverviewComponent.new(title: "Dashboard")) do |component|  %>
   <% component.with_overview_title do %>
-  <h1>My Listing</h1>
+  <h1>Property Details</h1>
   <% end %>
 
   <% component.with_overview_description do %>
-  <p>Map of Properties / listing</p>
+  <p>Detailed Property Overview</p>
   <% end %>
   <% end %>
 </div>
 <% end %>
-<!-- end -->
-
-<!-- ButtonAddComponent -->
-<% orveviewLayout.with_containerFunctionThree do %>
-<%= render(Button::ButtonAddComponent.new) do |component| %>
-<% component.with_links([
-    {  icon1: "plus", name: "Add Imóvel", href: new_api_real_estate_properties_record_path, class_name: "bnt-add-property" },
-  ]) %>
-<% end %>
 <% end %>
 <!-- end -->
-<% end %>
-<!-- end -->
-
-
-
-<br>
-<%= render 'shared/develop/not_main' %>
+<%= render 'admin/listings/properties/_navigation' %>

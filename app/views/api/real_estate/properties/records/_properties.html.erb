@@ -1,0 +1,29 @@
+<div class="container-property-listing">
+  <% @properties.each do |property| %>
+  <div class="card-property">
+    <div class="property-image">
+      <%= image_tag("default_property.png", alt: "Imagem do imóvel", class: "property-image") %>
+      <%#= image_tag(property.image_url || "default_property.png", alt: "Imagem do imóvel", class: "property-image") %>
+    </div>
+    <div class="property-details">
+      <div class="property-type">
+        <p class="text-type"><%= property.property_type.name %></p>
+        <p class="text-adress">Rua Bacabal, 140 <%#= property.description %></p>
+      </div>
+
+      <div class="property-rooms">
+        <p class="text-rooms"><%= property.bedrooms %> Quartos</p>
+        <p class="text-rooms"><%= property.bathrooms %> Banhheiros</p>
+        <p class="text-rooms"><%= property.garage_space %> Vagas</p>
+      </div>
+
+      <div class="property-price">
+        <p class="text-price">R$ 2.000 <%#= property.bathrooms %></p>
+
+        <%= link_to "Detalhes", admin_listing_path(property.id), class: "btn-details" %>
+
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

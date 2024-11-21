@@ -1,0 +1,10 @@
+<div class="container-input-search-property">
+  <%= render "shared/search_input_property",
+                url: root_path,
+                placeholder: "Search properties...",
+                icon_partial: "shared/icons/br_search"
+  %>
+  <div class="group-filter">
+    <%= render 'api/real_estate/properties/shared/filter_button' %>
+  </div>
+</div>

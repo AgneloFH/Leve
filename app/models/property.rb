@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class Property < ApplicationRecord
+  before_validation :generate_unique_code, on: :create
   # Associações
   belongs_to :property_type
 
@@ -18,4 +19,14 @@ class Property < ApplicationRecord
 
   # Scopes (se necessário)
   # scope :available, -> { where(status: 'available') }
+
+  private
+
+ def generate_unique_code
+   loop do
+     self.code = rand(100000..999999)
+      Rails.logger.info "Generated code: #{self.code}"
+      break unless Property.exists?(code: code)
+    end
+  end
 end

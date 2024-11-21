@@ -1,0 +1,5 @@
+<%= render(Button::ButtonFilterComponent.new) do |component| %>
+<% component.with_links([
+      { name: "Filter", href: admin_dashboard_path, icon: "filter", class_name: "link-dashboard" },
+  ]) %>
+<% end %>

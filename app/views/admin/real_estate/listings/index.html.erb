@@ -6,11 +6,11 @@
   <!-- Overview::OverviewComponent -->
   <%= render(Overview::OverviewComponent.new(title: "Dashboard")) do |component|  %>
   <% component.with_overview_title do %>
-  <h1>Add Property</h1>
+  <h1>My Listing</h1>
   <% end %>
 
   <% component.with_overview_description do %>
-  <p>Add a new property to the properties list</p>
+  <p>Map of Properties / listing</p>
   <% end %>
   <% end %>
 </div>
@@ -21,12 +21,12 @@
 <% orveviewLayout.with_containerFunctionThree do %>
 <%= render(Button::ButtonAddComponent.new) do |component| %>
 <% component.with_links([
-    {  icon1: "document", name: "Export", href: admin_discover_path, icon2: "small_down", class_name: "link-dashboard" },
+    {  icon1: "plus", name: "Add Imóvel", href: new_api_real_estate_properties_record_path, class_name: "bnt-add-property" },
   ]) %>
 <% end %>
 <% end %>
 <!-- end -->
 <% end %>
 <!-- end -->
-
-<%= render 'api/real_estate/properties/records/form', property: @property %>
+<%= render 'api/real_estate/properties/records/filter_overview' %>
+<%= render 'api/real_estate/properties/records/properties' %>

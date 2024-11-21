@@ -1,0 +1,32 @@
+.button-filter-component a {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  grid-template-columns: auto 1fr auto;
+  background-color: var(--colorWhite);
+  border-radius: var(--borderRadiusButton);
+  border: 1px solid var(--colorGray5);
+  color: var(--colorBlack);
+  width: max-content;
+  padding: 8px 14px;
+  column-gap: 8px;
+
+
+
+  i {
+    display: grid;
+    align-content: center;
+    color: var(--colorBlack);
+    height: max-content;
+    font-size: 1rem;
+  }
+}
+
+/* Media queries for responsiveness */
+
+/* Telas pequenas - Smartphones */
+@media (max-width: 767px) {
+  .button-export {
+    padding: 8px 14px;
+  }
+}
