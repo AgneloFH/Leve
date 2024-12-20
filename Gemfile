@@ -18,7 +18,7 @@ gem "solid_cable"
 gem "bootsnap", require: false
 gem "kamal", require: false
 gem "thruster", require: false
-gem "view_component", "~> 3.20"
+gem "view_component", "~> 3.21"
 
 # gem "bcrypt", "~> 3.1.7"
 # gem "image_processing", "~> 1.2"
